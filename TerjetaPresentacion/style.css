@@ -1,0 +1,165 @@
+/* Reset y estilos base */
+:root {
+  font-size: 16px; /* Base para rem */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 25rem; /* 400px */
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.foto-perfil {
+  width: 7.5rem; /* 120px */
+  height: 7.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.25rem solid #fff;
+  box-shadow: 0 0.3rem 0.9rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin: 0;
+  color: #333;
+  font-size: 1.5rem; /* 24px */
+  margin-bottom: 0.3rem;
+}
+
+.titulo {
+  color: #666;
+  font-size: 1rem; /* 16px */
+  margin-bottom: 1rem;
+}
+
+.descripcion {
+  color: #555;
+  font-size: 0.875rem; /* 14px */
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  padding: 0 0.5rem;
+}
+
+.botones-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem; /* 10px */
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+.boton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.boton:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.3rem 0.9rem rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp {
+  background: #25d366;
+}
+.email {
+  background: #d44638;
+}
+.linkedin {
+  background: #0077b5;
+}
+.telefono {
+  background: #6a5acd;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.red-social {
+  color: #555;
+  font-size: 1.375rem; /* 22px */
+  transition: color 0.3s;
+}
+
+.red-social:hover {
+  color: #0077b5;
+}
+
+/* Efecto de borde animado */
+.tarjeta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.3rem;
+  background: linear-gradient(90deg, #6a5acd, #25d366, #0077b5);
+  animation: gradientBorder 3s infinite alternate;
+}
+
+@keyframes gradientBorder {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+/* Media Queries para ajustes específicos */
+@media (max-width: 480px) {
+  :root {
+    font-size: 14px; /* Ajuste base para móviles */
+  }
+
+  .tarjeta {
+    padding: 1.25rem;
+  }
+
+  .boton {
+    padding: 0.6rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .tarjeta {
+    max-width: 28rem; /* 448px */
+  }
+
+  .foto-perfil {
+    width: 8rem;
+    height: 8rem;
+  }
+}
