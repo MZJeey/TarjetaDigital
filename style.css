@@ -11,14 +11,24 @@
 
 body {
   font-family: "Arial", sans-serif;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+  background: url(../img/imagenfond.jpg) no-repeat center center;
+  background-size: cover;
+
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 1rem;
 }
-
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+.qr {
+  margin-left: 10rem;
+}
 .tarjeta {
   background: white;
   border-radius: 1rem;
